@@ -20,16 +20,16 @@ export const printTeacher: printTeacherFunction = function (firstName: string, l
   return firstName[0] + '. ' + lastName;
 }
 
-interface studentClassInterface {
+interface StudentClassInterface {
   firstName: string;
   lastName: string;
 }
 
-interface studentConstructor {
-  new (firstName: string, lastName: string): StudentClass
+interface StudentConstructor {
+  new(firstName: string, lastName: string): StudentClassInterface;
 };
 
-class StudentClass implements studentClassInterface {
+class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
   constructor(firstName: string, lastName: string) {
