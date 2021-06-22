@@ -19,7 +19,7 @@ const student2: Student = {
   location: "Not Tulsa",
 };
 
-const allStudents = [student1, student2];
+const allStudents: Array<Student> = [student1, student2];
 
 const body = document.getElementsByTagName('body')[0];
 const table = document.createElement('table');
