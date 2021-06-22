@@ -16,7 +16,7 @@ interface printTeacherFunction {
   lastName: string): string
 };
 
-function printTeacher(firstName: string, lastName: string) {
+export default function printTeacher(firstName: string, lastName: string) {
   return firstName[0] + '. ' + lastName;
 }
 
