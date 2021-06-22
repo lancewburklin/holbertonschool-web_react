@@ -23,7 +23,7 @@ const allStudents: Array<Student> = [student1, student2];
 
 const body: HTMLBodyElement = document.getElementsByTagName('body')[0];
 const table: HTMLTableElement = document.createElement('table');
-const tbody: HTMLElement = document.createElement('tbody');
+const tbody: HTMLTableSectionElement = document.createElement('tbody');
 for (let i: number = 0; i < allStudents.length; i++) {
   const tblR: HTMLTableRowElement = document.createElement('tr');
   const name: HTMLTableCellElement = document.createElement('td');
