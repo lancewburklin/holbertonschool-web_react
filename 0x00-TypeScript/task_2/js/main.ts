@@ -24,7 +24,7 @@ export class Director implements DirectorInterface {
 
 export class Teacher implements TeacherInterface {
   workFromHome() {
-    return "Cannot from home";
+    return "Cannot work from home";
   }
   getCoffeeBreak() {
     return 'Cannot have a break';
