@@ -23,7 +23,7 @@ const allStudents: Array<Student> = [student1, student2];
 
 const body: HTMLElement = document.getElementsByTagName('body')[0];
 const table: HTMLElement = document.createElement('table');
-for (let i = 0; i < allStudents.length; i++) {
+for (let i: number = 0; i < allStudents.length; i++) {
   const tblR: HTMLElement = document.createElement('tr');
   const name: HTMLElement = document.createElement('td');
   name.innerHTML = allStudents[i].firstName;
