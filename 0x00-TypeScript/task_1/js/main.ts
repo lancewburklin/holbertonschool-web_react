@@ -23,13 +23,15 @@ export const printTeacher: printTeacherFunction = function (firstName: string, l
 interface StudentClassInterface {
   firstName: string;
   lastName: string;
+  displayName(): string;
+  workOnHomework(): string;
 }
 
 interface StudentConstructor {
   new(firstName: string, lastName: string): StudentClassInterface;
 };
 
-class StudentClass implements StudentClassInterface {
+export class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
   constructor(firstName: string, lastName: string) {
