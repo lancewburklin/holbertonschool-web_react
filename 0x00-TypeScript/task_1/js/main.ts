@@ -31,7 +31,7 @@ interface StudentConstructor {
   new(firstName: string, lastName: string): StudentClassInterface;
 };
 
-export const StudentClass: StudentConstructor = class implements StudentClassInterface {
+export const StudentClass: StudentConstructor = class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
   constructor(firstName: string, lastName: string) {
