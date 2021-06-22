@@ -25,9 +25,9 @@ const body: HTMLBodyElement = document.getElementsByTagName('body')[0];
 const table: HTMLTableElement = document.createElement('table');
 for (let i: number = 0; i < allStudents.length; i++) {
   const tblR: HTMLTableRowElement = document.createElement('tr');
-  const name: HTMLTableDataCellElement = document.createElement('td');
+  const name: HTMLTableCellElement = document.createElement('td');
   name.innerHTML = allStudents[i].firstName;
-  const location: HTMLTableDataCellElement = document.createElement('td');
+  const location: HTMLTableCellElement = document.createElement('td');
   location.innerHTML = allStudents[i].location;
   tblR.appendChild(name);
   tblR.appendChild(location);
