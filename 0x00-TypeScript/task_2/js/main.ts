@@ -51,11 +51,10 @@ export function isDirector(employee: DirectorInterface | TeacherInterface): bool
   return true;
 }
 
-export function executeWork(employee: DirectorInterface | TeacherInterface): boolean {
+export function executeWork(employee: DirectorInterface | TeacherInterface): string {
   if (employee instanceof Director) {
-    employee.workDirectorTasks();
+    return employee.workDirectorTasks();
   } else if (employee instanceof Teacher) {
-    employee.workTeacherTasks();
+    return employee.workTeacherTasks();
   }
-  return true
 }
