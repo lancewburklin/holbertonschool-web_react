@@ -15,3 +15,4 @@ CRUD.updateRow(newRowId, updatedRow);
 CRUD.deleteRow(newRowId);
 
 // ["./crud.d.ts />"]
+// ["/// <reference path =", "./crud.js"]
