@@ -1,4 +1,4 @@
-/// <reference path="./crud.d.ts" />
+/// <reference path="./crud.d.ts">
 import { RowID } from './interface';
 import { RowElement } from './interface';
 import * as CRUD from './crud';
@@ -14,4 +14,4 @@ const updatedRow: RowElement = { ...row, age: 23 };
 CRUD.updateRow(newRowId, updatedRow);
 CRUD.deleteRow(newRowId);
 
-// ["/// <reference path =", "./crud.js"]
+// ["./crud.d.ts />"]
