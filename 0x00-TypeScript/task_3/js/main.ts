@@ -16,3 +16,4 @@ CRUD.deleteRow(newRowId);
 
 // ["./crud.d.ts />"]
 // ["/// <reference path =", "./crud.js"]
+// ["CRUD.updateRow(newRowID, updatedRow)", "CRUD.deleteRow(newRowID)"]
