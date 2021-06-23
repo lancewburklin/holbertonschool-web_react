@@ -1,4 +1,4 @@
-/// <reference path="./crud.d.ts">
+/// <reference path="./crud.d.ts" />
 import { RowID } from './interface';
 import { RowElement } from './interface';
 import * as CRUD from './crud';
