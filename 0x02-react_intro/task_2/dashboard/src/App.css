@@ -1,0 +1,40 @@
+.Holb-logo {
+  display: inline-block;
+  vertical-align: middle;
+  height: 10rem;
+  width: 10rem;
+}
+
+.App-header h1 {
+  vertical-align: middle;
+  display: inline-block;
+  color: #c7254e;
+}
+
+.App-body {
+  height: 20rem;
+  border-top: 2px solid #c7254e;
+  border-bottom: 2px solid #c7254e;
+}
+
+.App-body p {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.App-footer p {
+  text-align: center;
+  font-style: italic;
+}
+
+body form {
+  margin-left: 1rem;
+}
+
+body form label {
+  margin-left: 1rem;
+}
+
+.subButton {
+  margin-left: 1rem;
+}
