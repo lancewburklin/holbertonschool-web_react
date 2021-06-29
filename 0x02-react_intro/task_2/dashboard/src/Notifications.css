@@ -1,5 +1,18 @@
 .Notifications {
+    position: relative;
     padding-top: 3rem;
-    border: 2px solid #c7254e;
-    text-align: center;
+    border: 2px dotted #c7254e;
+    margin-bottom: 3rem;
+}
+
+.Notifications p {
+    vertical-align: middle;
+}
+
+[data-priority="default"] {
+    color: blue;
+}
+
+[data-priority="urgent"] {
+    color: red;
 }
