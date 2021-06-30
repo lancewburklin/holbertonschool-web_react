@@ -8,8 +8,10 @@ test('Testing getFullYear', () => {
   expect(getFullYear()).toEqual(new Date().getFullYear());
 });
 
-test('Testing getFooterCopy with True and False', () => {
-  expect(getFooterCopy(true)).toEqual('Holberton School');
+test('Testing getFooterCopy with True', () => {
+  expect(getFooterCopy(true)).toEqual('Holberton School');})
+
+test('Testing when False', () => {
   expect(getFooterCopy(false)).toEqual('Holberton School main dashboard');
 })
 
