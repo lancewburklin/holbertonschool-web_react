@@ -1,0 +1,12 @@
+.Holb-logo {
+  display: inline-block;
+  vertical-align: middle;
+  height: 10rem;
+  width: 10rem;
+}
+
+.App-header h1 {
+  vertical-align: middle;
+  display: inline-block;
+  color: #c7254e;
+}
