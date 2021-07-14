@@ -1,0 +1,24 @@
+.Notifications {
+    position: relative;
+    padding-top: 1rem;
+    border: 2px dotted #c7254e;
+    margin-bottom: 3rem;
+    float: right;
+}
+
+.menuItem {
+    text-align: right;
+    position: relative;
+}
+
+.Notifications p {
+    vertical-align: middle;
+}
+
+[data-notification-type="default"] {
+    color: blue;
+}
+
+[data-notification-type="urgent"] {
+    color: red;
+}
