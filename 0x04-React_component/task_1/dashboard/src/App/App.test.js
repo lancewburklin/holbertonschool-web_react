@@ -1,10 +1,16 @@
+
+/**
+ * @jest-environment jsdom
+ */
+
 import React from 'react'
 import '@testing-library/react'
-import { render, shallow } from 'enzyme'
+import { render, shallow, mount } from 'enzyme'
 import App from './App.js'
 import CourseList from '../CourseList/CourseList'
 import CourseListRow from '../CourseList/CourseListRow.js'
 import Login from '../Login/Login'
+
 
 test('Testing if App renders', () => {
   const wrapper = render(<App />);
@@ -40,4 +46,20 @@ test('Testing for CourseList', () => {
   const wrapper = shallow(<App isLoggedIn={true}/>)
   expect(wrapper.find(Login)).toHaveLength(0);
   expect(wrapper.find(CourseList)).toHaveLength(1);
+})
+
+test('Testing the logout', () => {
+  window.alert = jest.fn();
+  const map = {};
+  window.addEventListener = jest.fn().mockImplementation((event, cb) => {
+    map[event] = cb;
+  });
+  const myObj = {
+    logOut: jest.fn()
+  }
+  const wrapper = mount(<App {...myObj}/>);
+  var event = new KeyboardEvent('keydown', {ctrlKey: true, 'keyCode': 72});
+  document.dispatchEvent(event);
+  expect(myObj.logOut).toHaveBeenCalled();
+  window.alert.mockRestore();
 })

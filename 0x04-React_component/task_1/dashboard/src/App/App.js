@@ -8,13 +8,23 @@ import CourseList from '../CourseList/CourseList'
 import { getLatestNotification } from '../utils/utils'
 var React = require('react');
 
-function logKey(e) {
-  console.log(e.code);
-}
 
 class App extends React.Component {
+  logKey = (e) => {
+  if (e.ctrlKey) {
+    if (e.keyCode == 72) {
+      alert('Logging you out');
+      this.props.logOut();
+    }
+  }
+  }
+  componentDidMount() {
+    document.addEventListener("keydown", this.logKey);
+  }
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.logKey);
+  }
   render() {
-  document.addEventListener("keydown", logKey);
   const note = { __html: getLatestNotification() };
   const listCourses = [
     {id: 1, name: 'ES6', credit: 60},
@@ -53,7 +63,8 @@ class App extends React.Component {
 }
 
 App.defaultProps = {
-  isLoggedIn: false
+  isLoggedIn: false,
+  logOut: function() {}
 }
 
 App.propTypes = {
