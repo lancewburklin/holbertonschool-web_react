@@ -61,5 +61,6 @@ test('Testing the logout', () => {
   var event = new KeyboardEvent('keydown', {ctrlKey: true, 'keyCode': 72});
   document.dispatchEvent(event);
   expect(myObj.logOut).toHaveBeenCalled();
+  expect(window.alert).toBeCalledWith('Logging you out');
   window.alert.mockRestore();
 })
