@@ -4,7 +4,6 @@
  */
 
 import React from 'react'
-import '@testing-library/react'
 import { shallow, mount } from 'enzyme'
 import App from './App.js'
 import CourseList from '../CourseList/CourseList'
