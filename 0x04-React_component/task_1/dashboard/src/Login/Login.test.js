@@ -1,6 +1,5 @@
 import Login from './Login'
 import React from 'react'
-import '@testing-library/react'
 import { render, shallow } from 'enzyme'
 
 test('Testing for Login crash', () => {

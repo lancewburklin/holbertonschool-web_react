@@ -1,6 +1,5 @@
 import Footer from './Footer'
 import React from 'react'
-import '@testing-library/react'
 import { render, shallow } from 'enzyme'
 
 test('Testing for Footer crash', () => {

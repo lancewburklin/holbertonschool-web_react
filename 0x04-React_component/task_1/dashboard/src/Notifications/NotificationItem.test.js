@@ -1,6 +1,5 @@
 import React from 'react'
 import NotificationItem from './NotificationItem'
-import '@testing-library/react'
 import { shallow } from 'enzyme'
 
 test('Checking that Notification Items render', () => {

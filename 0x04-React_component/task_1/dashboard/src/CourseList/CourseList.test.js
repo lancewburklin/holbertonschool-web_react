@@ -1,6 +1,5 @@
 import React from 'react'
 import CourseList from './CourseList'
-import '@testing-library/react'
 import { render, shallow } from 'enzyme'
 import CourseListRow from './CourseListRow'
 
