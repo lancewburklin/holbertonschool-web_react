@@ -83,5 +83,6 @@ App.propTypes = {
   isLoggedIn: PropTypes.bool,
   logOut: PropTypes.func
 }
+// ["StyleSheet.create({", "body: {", "footer: {"] -
 
 export default App;
