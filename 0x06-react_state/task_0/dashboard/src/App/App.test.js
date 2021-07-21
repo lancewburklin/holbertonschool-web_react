@@ -72,3 +72,12 @@ test('Testing the logout', () => {
   expect(window.alert).toBeCalledWith('Logging you out');
   window.alert.mockRestore();
 })
+
+test('Testing the displayDrawer', () => {
+  const wrapper = mount(<App />).instance();
+  expect(wrapper.state.displayDrawer).toBe(false);
+  wrapper.handleDisplayDrawer();
+  expect(wrapper.state.displayDrawer).toBe(true);
+  wrapper.handleHideDrawer();
+  expect(wrapper.state.displayDrawer).toBe(false);
+})

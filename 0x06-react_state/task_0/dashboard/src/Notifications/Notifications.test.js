@@ -4,7 +4,7 @@
 
 import Notifications from './Notifications'
 import React from 'react'
-import { render, shallow } from 'enzyme'
+import { mount, render, shallow } from 'enzyme'
 import { StyleSheetTestUtils } from 'aphrodite';
 
 beforeEach(() => {
@@ -32,4 +32,14 @@ test('Spying on the console.log call', () => {
   instance.markAsRead(1);
   expect(spy).toHaveBeenCalledWith('Notification 1 has been marked as read');
   spy.mockRestore();
+})
+
+test('Testing hiding and showing notifications', () => {
+  const handleDisplayDrawer = jest.fn();
+  const handleHideDrawer = jest.fn();
+  const wrapper = shallow(<Notifications displayDrawer={false} handleDisplayDrawer={handleDisplayDrawer} handleHideDrawer={handleHideDrawer}/>);
+  wrapper.find("#Display").simulate('click');
+  expect(handleDisplayDrawer).toHaveBeenCalled();
+  wrapper.find("#Close").simulate('click');
+  expect(handleHideDrawer).toHaveBeenCalled();
 })

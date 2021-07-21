@@ -47,7 +47,6 @@ class App extends React.Component {
   }
   render() {
   const {displayDrawer} = this.state;
-  const {handleDisplayDrawer, handleHideDrawer} = this;
   const {isLoggedIn, logOut} = this.props;
   const note = { __html: getLatestNotification() };
   const listCourses = [
@@ -63,7 +62,7 @@ class App extends React.Component {
   if (isLoggedIn) {
     return (
       <React.Fragment>
-      <Notifications listNotifications={listNotifications} displayDrawer={displayDrawer} handleDisplayDrawer={handleDisplayDrawer} handleHideDrawer={handleHideDrawer}/>
+      <Notifications listNotifications={listNotifications} displayDrawer={displayDrawer} handleDisplayDrawer={this.handleDisplayDrawer} handleHideDrawer={this.handleHideDrawer}/>
       <div className="App">
         <Header />
         <BodySectionWithMarginBottom title="Course List">
@@ -79,7 +78,7 @@ class App extends React.Component {
   } else {
     return (
       <React.Fragment>
-      <Notifications listNotifications={listNotifications} displayDrawer={displayDrawer} handleDisplayDrawer={handleDisplayDrawer} handleHideDrawer={handleHideDrawer}/>
+      <Notifications listNotifications={listNotifications} displayDrawer={displayDrawer} handleDisplayDrawer={this.handleDisplayDrawer} handleHideDrawer={this.handleHideDrawer}/>
       <div className="App">
         <Header />
         <BodySectionWithMarginBottom title="Log in to continue">
