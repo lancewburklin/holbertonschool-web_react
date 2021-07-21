@@ -31,6 +31,7 @@ class Notifications extends React.Component {
     console.log(`Notification ${id} has been marked as read`);
   }
   render() {
+  const { displayDrawer, listNotifications, handleDisplayDrawer, handleHideDrawer } = this.props
   const closeStyle = {
     position: 'absolute',
     top: '5px',
@@ -55,15 +56,14 @@ class Notifications extends React.Component {
       display: 'none'
     }
   }
-  console.log(this.props.handleDisplayDrawer);
   return (
     <>
-    <div className={css(styles.menuItem)} onClick={() => this.props.handleDisplayDrawer()}>Your notifications</div>
+    <div className={css(styles.menuItem)} onClick={() => handleDisplayDrawer()}>Your notifications</div>
     <div className={css(styles.Notifications)} style={notifyStyle}>
-      <button aria-label="Close" onClick={() => this.props.handleHideDrawer()} style={closeStyle}><img src={closeButton} style={imgStyle} alt="Close"/></button>
+      <button aria-label="Close" onClick={() => handleHideDrawer()} style={closeStyle}><img src={closeButton} style={imgStyle} alt="Close"/></button>
       <p className={css(styles.pStyle)}>Here is the list of notifications</p>
       <ul>
-        <this.NotificationList items={this.props.listNotifications}/>
+        <this.NotificationList items={listNotifications}/>
       </ul>
     </div>
     </>
