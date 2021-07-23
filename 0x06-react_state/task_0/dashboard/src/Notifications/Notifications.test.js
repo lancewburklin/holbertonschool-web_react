@@ -34,12 +34,16 @@ test('Spying on the console.log call', () => {
   spy.mockRestore();
 })
 
-test('Testing hiding and showing notifications', () => {
+it('Verify that clicking on the menu item calls handleDisplayDrawer', () => {
   const handleDisplayDrawer = jest.fn();
-  const handleHideDrawer = jest.fn();
-  const wrapper = shallow(<Notifications displayDrawer={false} handleDisplayDrawer={handleDisplayDrawer} handleHideDrawer={handleHideDrawer}/>);
+  const wrapper = shallow(<Notifications displayDrawer={false} handleDisplayDrawer={handleDisplayDrawer}/>);
   wrapper.find("#Display").simulate('click');
   expect(handleDisplayDrawer).toHaveBeenCalled();
+})
+
+it('Verify that clicking on the button calls handleHideDrawer', () => {
+  const handleHideDrawer = jest.fn();
+  const wrapper = shallow(<Notifications displayDrawer={false} handleHideDrawer={handleHideDrawer}/>);
   wrapper.find("#Close").simulate('click');
   expect(handleHideDrawer).toHaveBeenCalled();
 })
