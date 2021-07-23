@@ -74,10 +74,10 @@ test('Testing the logout', () => {
 })
 
 test('Testing the displayDrawer', () => {
-  const wrapper = mount(<App />).instance();
-  expect(wrapper.state.displayDrawer).toBe(false);
-  wrapper.handleDisplayDrawer();
-  expect(wrapper.state.displayDrawer).toBe(true);
-  wrapper.handleHideDrawer();
-  expect(wrapper.state.displayDrawer).toBe(false);
+  const wrapper = mount(<App />);
+  expect(wrapper.state().displayDrawer).toBe(false);
+  wrapper.instance().handleDisplayDrawer();
+  expect(wrapper.state().displayDrawer).toBe(true);
+  wrapper.instance().handleHideDrawer();
+  expect(wrapper.state().displayDrawer).toBe(false);
 })
