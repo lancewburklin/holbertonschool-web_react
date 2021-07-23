@@ -57,7 +57,7 @@ class Notifications extends React.Component {
     }
   }
   return (
-    <>
+    <div>
     <div id="Display" className={css(styles.menuItem)} onClick={() => handleDisplayDrawer()}>Your notifications</div>
     <div className={css(styles.Notifications)} style={notifyStyle}>
       <button id="Close" aria-label="Close" onClick={() => handleHideDrawer()} style={closeStyle}><img src={closeButton} style={imgStyle} alt="Close"/></button>
@@ -66,7 +66,7 @@ class Notifications extends React.Component {
         <this.NotificationList items={listNotifications}/>
       </ul>
     </div>
-    </>
+    </div>
   );
   }
 }
