@@ -9,5 +9,5 @@ export function concatElements(page1, page2) {
 export function mergeElements(page1, page2) {
   const list1 = Map(page1);
   const list2 = Map(page2);
-  return list2.merge(list1);
+  return list1.merge(list2);
 }
